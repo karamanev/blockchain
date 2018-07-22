@@ -1,0 +1,19 @@
+{{#if block}}
+<h2>Blocks in our blockchain</h2>
+
+<ul>
+    {{#each block}}
+    <li>
+        <p><b>Block # {{this.index}}</b></p> 
+        <p>Timestamp: {{this.timestamp}}</p> 
+        <p>Difficulty: {{this.difficulty}}</p> 
+        <p>Nonce: {{this.nonce}}</p>
+        <p>Previous hash: {{this.previousHash}}</p>
+        <br>
+    </li>
+    {{/each}}
+</ul>
+
+{{else}}
+<h2>There are not any blocks in our blockchain yet.</h2>
+{{/if}}

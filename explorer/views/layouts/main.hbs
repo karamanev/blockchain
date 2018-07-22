@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blockchain explorer</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+    <div>
+        <aside>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/block/blocks">View blocks</a>
+                <a href="/block/transactions">View confirmed transactions</a>
+                <a href="/block/pending">View pending transactions</a>
+             {{#if ready}}
+                <a href="/block/accounts">View accounts and ballances</a>
+            {{/if}}
+            </nav>
+        </aside>
+        <div id="container">
+            <main>
+                <h1>Welcome to our blockchain!</h1>
+                {{#if globalError}}
+                <span>{{globalError}}</span>
+                {{/if}}
+
+                <section>
+                    <div class="spacer">
+                        {{{body}}}
+                    </div>
+                </section>
+
+            </main>
+            <footer>
+                SoftUni educational blockchain &copy; 2018
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

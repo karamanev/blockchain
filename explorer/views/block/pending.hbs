@@ -1,0 +1,13 @@
+{{#if pending}}
+<h2>Pending transactions in our blockchain</h2>
+<ul>
+    {{#each pending}}
+    <li>
+        <p>Sender: {{this.from}}; Recipient: {{this.to}}; 
+            Value: {{this.value}}; Fee: {{this.fee}}; Data: {{this.data}}
+    </li>
+    {{/each}}
+</ul> 
+{{else}}
+<h2>There are no pending transactions.</h2>
+{{/if}}

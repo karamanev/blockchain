@@ -1,0 +1,22 @@
+{{#if transaction}}
+<h2>All transactions</h2>
+
+<ul>
+    {{#each transaction}}
+    <li>
+        <p>
+            <b>Transaction # {{@index}}</b>
+        </p>
+        <p>Sender: {{this.sender}} </p>
+        <p>Recipient: {{this.recipient}}</p>
+        <p>Sender public key: {{this.senderPublickKey}}</p>
+        <p>Amount: {{this.amount}}</p>
+        <p>Mined in block # {{this.minedInBlockIndex}}</p>
+        <br>
+    </li>
+    {{/each}}
+</ul>
+
+{{else}}
+<h2>There are not any transactions in our blockchain yet.</h2>
+{{/if}}

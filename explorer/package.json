@@ -1,0 +1,20 @@
+{
+  "name": "blockchain-explorer",
+  "version": "1.0.0",
+  "description": "Blockchain explorer",
+  "main": "index.js",
+  "keywords": [
+    "blockchain"
+  ],
+  "author": "GK",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "4.15.3",
+    "express-handlebars": "3.0.0",
+    "express-session": "1.15.3",
+    "mongoose": "^5.1.5",
+    "request": "^2.87.0"
+  }
+}

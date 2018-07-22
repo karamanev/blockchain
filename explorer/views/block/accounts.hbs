@@ -1,0 +1,14 @@
+{{#if account}}
+<h2>Accounts in our blockchain</h2>
+
+<ul>
+    {{#each account}}
+    <li>
+        <p>Public key: {{this.public}}; 
+    </li>
+    {{/each}}
+</ul> 
+
+{{else}}
+<h2>There are not any accounts in our blockchain yet.</h2>
+{{/if}}
