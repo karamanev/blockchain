@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blockchain faucet</title>
+    <link rel="stylesheet" href="/css/site.css">
+<script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <div>
+        <aside>
+            <nav>
+                <a href="/">Home</a>
+                <a href="http://localhost:3001">Take your real wallet</a>
+            </nav>
+        </aside>
+        <div id="container">
+            <main>
+                <h1>Welcome to the faucet!</h1>
+                {{#if globalError}}
+                <span>{{globalError}}</span>
+                {{/if}}
+                <section>
+                    <div class="spacer">
+                    {{{body}}}
+                    </div>
+                </section>
+
+        </main>
+        <footer>
+            SoftUni educational blockchain &copy; 2018
+        </footer>
+    </div>
+    </div>
+</body>
+
+</html>

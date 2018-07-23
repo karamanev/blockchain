@@ -1,0 +1,17 @@
+<h2>Take coins from the faucet</h2>
+<form action="transaction" method="POST">
+    <label>Enter you blockchain address:</label>
+    <input type="text" name="address">
+    <label>Node URL:</label>
+
+    <select name="node" size="2" style="width:185px;-webkit-appearance: none; -moz-appearance: none; text-indent: 1px;
+    text-overflow: '';">
+        <option value="http://localhost:8080">Local 8080</option>
+        <option value="http://localhost:1234">Local 1234</option>
+    </select>
+<br>
+<br>
+<br>
+    <div class="g-recaptcha" data-sitekey="6LfSO2AUAAAAAPLOqBwTKSCXkRJ_4nrcwITEFf4p"></div>
+    <input type="submit" value="Get coins!">
+</form>
