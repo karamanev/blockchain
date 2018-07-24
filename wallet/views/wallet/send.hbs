@@ -1,0 +1,46 @@
+<section>
+    <h2>Send a transaction</h2>
+    <div class="spacer">
+        <form action="send" method="POST">
+            <label>Sender address:</label>
+            <input type="text" name="username">
+            <label>Recipient address:</label>
+            <input type="text" name="recipient">
+            <label>Value:</label>
+            <input type="number" name="value">
+            <select name="node" size="2" style="width:185px;-webkit-appearance: none; -moz-appearance: none; text-indent: 1px;
+    text-overflow: '';">
+                <option value="http://localhost:8080">Local 8080</option>
+                <option value="http://localhost:1234">Local 1234</option>
+            </select>
+            <input type="submit" value="Sign and send transaction">
+        </form>
+
+        {{#if transactionData}}
+        <p style="word-wrap: break-word; margin: 0">
+            <br>
+            <b>The transaction was succesfully sent to the blockchain! </b>
+            <br>
+            <p style="word-wrap: break-word; margin: 0">
+                <br>
+                <b>Sender: </b>
+                <br>{{transactionData.from}}</p>
+            <br>
+            <p style="word-wrap: break-word; margin: 0">
+                <b>Recipient: </b>
+                <br>{{transactionData.to}}</p>
+            <br>
+            <p style="word-wrap: break-word; margin: 0">
+                <b>Value: </b>
+                <br>{{transactionData.value}}</p>
+            <br>
+            <p style="word-wrap: break-word; margin: 0">
+                <b>Senders signature: </b>
+                <br>{{transactionData.signature}}</p>
+            <br>
+            <p style="word-wrap: break-word; margin: 0">
+                <b>Sent to node: </b>
+                <br>{{transactionData.node}}</p>
+            <br> {{/if}}
+    </div>
+</section>

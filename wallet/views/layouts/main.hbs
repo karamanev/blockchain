@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blockchain wallet</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+    <div>
+        <aside>
+            <nav>
+                <a href="/">Home</a>
+                {{#if currentUser}}
+                <a href="/wallet/account">Account ballance</a>
+                <a href="/wallet/send">Send transaction</a>
+                <a href="/users/logout">Logout</a>
+                {{else}}
+                <a href="/users/register">Create new wallet</a>
+                <a href="/users/login">Open wallet</a>
+                {{/if}}
+            </nav>
+        </aside>
+        <div id="container">
+            <main>
+                <h1>Welcome to our blockchain!</h1>
+                {{#if globalError}}
+                <span>{{globalError}}</span>
+                {{/if}}
+                <section>
+                    <div class="spacer">
+                    {{{body}}}
+                    </div>
+                </section>
+
+        </main>
+        <footer>
+            SoftUni educational blockchain &copy; 2018
+        </footer>
+    </div>
+    </div>
+</body>
+
+</html>

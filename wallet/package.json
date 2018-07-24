@@ -1,0 +1,26 @@
+{
+  "name": "blockchain-wallet",
+  "version": "1.0.0",
+  "description": "Blockchain wallet",
+  "main": "index.js",
+  "keywords": [
+    "blockchain"
+  ],
+  "author": "GK",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "1.4.3",
+    "crypto-js": "^3.1.9-1",
+    "elliptic": "^6.4.0",
+    "express": "4.15.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "1.15.3",
+    "handlebars": "^4.0.11",
+    "js-sha3": "^0.7.0",
+    "mongoose": "4.10.4",
+    "passport": "0.3.2",
+    "passport-local": "1.0.0",
+    "request": "^2.87.0"
+  }
+}

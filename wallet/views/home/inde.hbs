@@ -1,0 +1,17 @@
+<p style="word-wrap: break-word; margin: 0; font-size:17px">
+    {{#if walletData}}
+    <p style="word-wrap: break-word; margin: 0">
+        <b>Your randomly generated private key:</b>
+        <br>{{walletData.private}}
+    </p>
+    <br>
+    <p style="word-wrap: break-word; margin: 0">
+        <b>Your public key:</b>
+        <br>{{walletData.public}}</p>
+    <br>
+    <p style="word-wrap: break-word; margin: 0">
+        <b>Your blockchain address:</b>
+        <br>{{walletData.address}} </p>
+    {{/if}}
+
+    <h2>Check your account or send a transaction</h2>

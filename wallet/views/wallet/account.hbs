@@ -1,0 +1,29 @@
+<h2>View account balance</h2>
+<form action="check" method="GET">
+  {{#if address}}
+  <p>Address:</p>
+  <p>{{address}}</p>
+  {{/if}}
+  <p>Blockchain node:</p>
+  <select name="node" size="2">
+    <option value="http://localhost:8080">http://localhost:8080</option>
+    <option value="http://localhost:1234">http://localhost:1234</option>
+  </select>
+  <input type="submit" value="Display ballance">
+</form>
+
+{{#if data}}
+<ul>
+  {{#each data}}
+  <li>
+    <p>Sender: {{this.sender}} </p>
+    <p>Recipient: {{this.recipient}}</p>
+    <p>Sender public key: {{this.senderPublickKey}}</p>
+    <p>Amount: {{this.amount}}</p>
+    <p>Mined in block # {{this.minedInBlockIndex}}</p>
+    <br>
+  </li>
+  {{/each}}
+</ul>
+{{data}} 
+{{/if}}
